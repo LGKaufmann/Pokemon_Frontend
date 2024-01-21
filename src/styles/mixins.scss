@@ -1,0 +1,37 @@
+//Pantallas de celulares
+$screen-sm: 766px;
+//Pantallas de tablets
+$screen-md: 1024px;
+//Pantallas de escritorio
+$screen-lg: 1025px;
+
+// Mixin para small devices
+@mixin sm {
+  @media only screen and (max-width: $screen-sm) {
+    @content;
+  }
+}
+
+// Mixin para tablets
+@mixin md {
+  @media only screen and (min-width: $screen-sm) and (max-width: $screen-md) {
+    @content;
+  }
+}
+
+// Mixin para desktop
+@mixin lg {
+  @media only screen and (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+// Mixin para displays flex
+
+@mixin flex($direction, $wrap, $justify, $align, $space: 0) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $space;
+}

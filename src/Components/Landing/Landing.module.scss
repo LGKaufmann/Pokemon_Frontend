@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  background: url("../../../assets/paisaje2.jpg") no-repeat center top;
+  background-size: cover;
+  padding-top: 60px;
+
+  @include sm {
+    background: linear-gradient(
+      to bottom right,
+      rgb(170, 97, 186),
+      rgb(206, 156, 86)
+    );
+  }
+}
+
+.pokemon_image {
+  @include sm {
+    width: 300px;
+    height: 180px;
+  }
+  @include md {
+    width: 600px;
+    height: 300px;
+  }
+}
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.parrafo {
+  font-size: 2rem;
+  text-align: justify;
+  font-weight: bold;
+  padding: 0px 0px 5px 10px;
+  color: lightyellow;
+  border-bottom: 3px solid yellow;
+  border-radius: 6px;
+
+  @include sm {
+    font-size: 1.5rem;
+  }
+}
+
+.container4 {
+  display: flex;
+  opacity: 0.6;
+  justify-content: end;
+  width: 99vw;
+}
+
+.link {
+  text-decoration: none;
+  color: $white;
+}
+
+.span {
+  display: block;
+  background: linear-gradient(
+    to bottom right,
+    rgb(206, 156, 86),
+    rgb(170, 97, 186)
+  );
+  color: $black;
+  font-weight: 500;
+  padding: 16px 40px;
+  border: 2px solid wheat;
+  border-radius: 300px;
+}
+
+.span:hover {
+  background: linear-gradient(to top, wheat, rgb(170, 97, 186));
+  border: 2px solid $white;
+}

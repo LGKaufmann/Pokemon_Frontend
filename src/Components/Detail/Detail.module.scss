@@ -1,0 +1,238 @@
+.containerprin {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom right,
+    rgb(170, 97, 186),
+    rgb(206, 156, 86)
+  );
+}
+
+.container {
+  display: flex;
+  min-width: 96vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px;
+  padding-top: 45px;
+  border-radius: 6px;
+  background: url("../../../assets/pokedex.png") no-repeat top;
+  background-size: cover;
+  border: 5px solid white;
+  border-radius: 10px;
+
+  @include sm {
+    padding: 0;
+    min-width: 94vw;
+    justify-content: flex-start;
+  }
+}
+
+.container_stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  margin-top: 100px;
+  padding-top: 80px;
+  height: 600px;
+  width: 100%;
+
+  @include sm {
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0px;
+    height: 700px;
+    flex-direction: column;
+  }
+}
+
+.details_info {
+  display: inline;
+  position: absolute;
+  justify-content: center;
+
+  margin-top: 60px;
+  margin-left: -10px;
+
+  @include sm {
+    height: 360px;
+  }
+}
+
+.details_stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 5px 10px;
+  justify-content: center;
+  height: 450px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(170, 97, 186),
+    rgb(206, 156, 86)
+  );
+  margin-left: 30px;
+  border-radius: 6px;
+  border: 8px solid rgb(206, 156, 86);
+
+  @include sm {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 300px;
+    height: 200px;
+
+    margin-bottom: 10px;
+    margin-right: 30px;
+    border: 4px solid rgb(206, 156, 86);
+  }
+}
+
+.details_info_prin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 300px;
+  height: 450px;
+  background: linear-gradient(
+    to bottom right,
+    rgb(170, 97, 186),
+    rgb(206, 156, 86)
+  );
+  margin-left: 30px;
+  border-radius: 50px 0px 65px 0px;
+  -moz-border-radius: 50px 0px 65px 0px;
+  -webkit-border-radius: 0px 30px 65px 0px;
+  border: 12px solid rgb(206, 156, 86);
+
+  @include sm {
+    margin-left: 8px;
+    height: 430px;
+    width: 312px;
+    border: 6px solid rgb(206, 156, 86);
+  }
+}
+
+.stats_title {
+  display: block;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 10px;
+  color: rgb(251, 249, 249);
+  text-shadow: 2px 2px 2px #000000;
+  background: linear-gradient(
+    to bottom right,
+    rgb(170, 97, 186),
+    rgb(206, 156, 86)
+  );
+  width: 240px;
+  height: 28px;
+  border-radius: 5px;
+  letter-spacing: 4px;
+
+  @include sm {
+    width: 140px;
+  }
+}
+
+.stats_item {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+  color: rgb(251, 249, 249);
+  text-shadow: 1px 1px 1px #000000;
+  background-color: rgb(170, 97, 186);
+  width: 230px;
+  height: 22px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  letter-spacing: 4px;
+
+  @include sm {
+    width: 140px;
+  }
+}
+
+.details_container_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+
+  @include sm {
+    margin-top: 40px;
+  }
+}
+
+.details_title {
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(251, 249, 249);
+  text-shadow: 2px 2px 2px #000000;
+}
+.details_info_types {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  @include sm {
+    margin-top: 5px;
+  }
+}
+
+.container_loading {
+  display: flex;
+  min-width: 96vw;
+  height: 94vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px;
+  border-radius: 6px;
+  background: url("../../../assets/pokedex.png") no-repeat top;
+  background-size: cover;
+  border: 5px solid white;
+  border-radius: 10px;
+  font-size: 50px;
+  font-family: "VT323", monospace;
+
+  @include sm {
+    font-size: 20px;
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "VT323", monospace;
+  padding: 5px 0px 5px 10px;
+  text-align: center;
+  color: $black;
+  width: 100%;
+  margin-top: 10px;
+
+  @include sm {
+    width: 60%;
+    height: 30px;
+  }
+}
