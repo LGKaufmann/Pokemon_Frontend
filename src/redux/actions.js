@@ -20,7 +20,7 @@ import {
 export function getPokemons() {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get("http://localhost:3001/pokemons");
+      const { data } = await axios.get("/pokemons");
 
       return dispatch({
         type: GETPOKEMONS,
@@ -35,9 +35,7 @@ export function getPokemons() {
 export function getPokemonById(id) {
   return async function (dispatch) {
     try {
-      const pokemonDetails = await axios.get(
-        `http://localhost:3001/pokemons/${id}`
-      );
+      const pokemonDetails = await axios.get(`/pokemons/${id}`);
       return dispatch({
         type: GETPOKEMONDETAILS,
         payload: pokemonDetails.data,
@@ -50,7 +48,7 @@ export function getPokemonById(id) {
 export function getTypes() {
   return function (dispatch) {
     axios
-      .get("http://localhost:3001/types")
+      .get("/types")
       .then((response) => {
         // ordenamiento alfabetico de los types
         response.data.sort(function (a, b) {
@@ -70,10 +68,7 @@ export function getTypes() {
 export function createPokemon(newPokemon) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.post(
-        "http://localhost:3001/pokemons",
-        newPokemon
-      );
+      const { data } = await axios.post("/pokemons", newPokemon);
       alert("Pokemon creado correctamente!");
       return dispatch({
         type: CREATE_POKEMON,
@@ -92,9 +87,7 @@ export function createPokemon(newPokemon) {
 export function searchPokemon(name) {
   return async function (dispatch) {
     try {
-      const pokemonSearch = axios.get(
-        `http://localhost:3001/pokemons?name=${name}`
-      );
+      const pokemonSearch = axios.get(`/pokemons?name=${name}`);
       return dispatch({
         type: FINDPOKEMONS,
         payload: (await pokemonSearch).data,
