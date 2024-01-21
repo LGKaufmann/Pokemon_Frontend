@@ -166,6 +166,10 @@
 
   @include sm {
     width: 120px;
+    font-weight: bold;
+    margin: 6px;
+    padding: 3px;
+    font-size: 12px;
   }
 }
 
@@ -190,13 +194,17 @@
   color: rgb(251, 249, 249);
   text-shadow: 2px 2px 2px #000000;
 }
+
 .details_info_types {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 20px;
+
+  @include sm {
+    margin: 0;
+  }
 }
 
 .container_loading {
