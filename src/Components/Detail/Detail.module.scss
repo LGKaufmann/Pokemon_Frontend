@@ -65,6 +65,8 @@
   margin-left: -10px;
 
   @include sm {
+    margin: 50px;
+    padding: 0;
     height: 360px;
   }
 }
@@ -119,6 +121,7 @@
     margin-left: 8px;
     height: 430px;
     width: 312px;
+    padding: 0;
     border: 6px solid rgb(206, 156, 86);
   }
 }
@@ -142,7 +145,7 @@
   letter-spacing: 4px;
 
   @include sm {
-    width: 140px;
+    width: 130px;
   }
 }
 
@@ -162,7 +165,7 @@
   letter-spacing: 4px;
 
   @include sm {
-    width: 140px;
+    width: 120px;
   }
 }
 
@@ -194,10 +197,6 @@
   justify-content: center;
 
   margin-bottom: 20px;
-
-  @include sm {
-    margin-top: 5px;
-  }
 }
 
 .container_loading {
@@ -234,5 +233,6 @@
   @include sm {
     width: 60%;
     height: 30px;
+    font-size: 1.2rem;
   }
 }

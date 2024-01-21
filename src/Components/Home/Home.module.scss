@@ -7,12 +7,24 @@
   background-size: cover;
   background-attachment: fixed;
   min-height: 100vh;
+
+  @include sm {
+    background: linear-gradient(
+      to bottom right,
+      rgb(170, 97, 186),
+      rgb(206, 156, 86)
+    );
+  }
 }
 
 .title {
   color: rgb(170, 97, 186);
   font-size: 3em;
   transition: all 0.5s;
+
+  @include sm {
+    color: wheat;
+  }
 }
 
 .link {
