@@ -1,11 +1,11 @@
 import React from "react";
 import style from "./About.module.scss";
-import logo_react from "../../../assets/tecnologias/react.png";
-import logo_redux from "../../../assets/tecnologias/redux.png";
-import logo_express from "../../../assets/tecnologias/express.png";
-import logo_sequelize from "../../../assets/tecnologias/sequelize.png";
-import logo_postgres from "../../../assets/tecnologias/postgres.png";
-import imagen from "../../../assets/yo.jpg";
+import logo_react from "../../../public/assets/tecnologias/react.png";
+import logo_redux from "../../../public/assets/tecnologias/redux.png";
+import logo_express from "../../../public/assets/tecnologias/express.png";
+import logo_sequelize from "../../../public/assets/tecnologias/sequelize.png";
+import logo_postgres from "../../../public/assets/tecnologias/postgres.png";
+import imagen from "../../../public/assets/yo.jpg";
 
 const About = () => {
   return (

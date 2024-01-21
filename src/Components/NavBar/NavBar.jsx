@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo.png";
-import raichu from "../../../assets/raichu.gif";
+import logo from "../../../public/assets/logo.png";
+import raichu from "../../../public/assets/raichu.gif";
 import style from "./NavBar.module.scss";
 import SearchBar from "../SearchBar/SearchBar";
 
