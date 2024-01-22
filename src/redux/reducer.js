@@ -25,8 +25,6 @@ const initialState = {
   filteredPokemons: [],
   types: [],
   pokemonFound: {},
-  createdPokemon: false,
-  error_msg: "",
   pokemonDetail: {},
   searchPokemon: false,
   loading: false,
@@ -90,7 +88,6 @@ function rootReducer(state = initialState, action) {
         pokemons: [...state.pokemons, action.payload],
         filteredPokemons: [...state.filteredPokemons, action.payload],
         totalPokemons: state.pokemons.length + 1,
-        createdPokemon: true,
       };
     case GETPOKEMONDETAILS:
       return {
@@ -129,13 +126,6 @@ function rootReducer(state = initialState, action) {
         currentPage: 1,
         searchPokemon: false,
       };
-
-    case ERROR_NAME_POKEMON: {
-      return {
-        ...state,
-        createdPokemon: action.payload,
-      };
-    }
 
     case SORT_NAME:
       let orderPokemons = [...state.filteredPokemons];

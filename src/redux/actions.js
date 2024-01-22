@@ -76,10 +76,6 @@ export function createPokemon(newPokemon) {
       });
     } catch (error) {
       alert(error.response.data.error);
-      return dispatch({
-        type: ERROR_NAME_POKEMON,
-        payload: false,
-      });
     }
   };
 }
