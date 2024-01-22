@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import validation from "../../utils/validation";
 import Pokemon from "../Pokemon/Pokemon";
-import { createPokemon } from "../../redux/actions";
+import { createPokemon, getTypes } from "../../redux/actions";
 import style from "./Create.module.scss";
 
 const Create = () => {
@@ -100,6 +100,10 @@ const Create = () => {
       });
     }
   };
+
+  useEffect(() => {
+    dispatch(getTypes());
+  }, []);
 
   return (
     <div>
