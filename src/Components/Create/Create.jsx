@@ -82,6 +82,8 @@ const Create = () => {
       document.getElementById("typesSelect").disabled = false;
     }
 
+    document.getElementById("typesSelect").value = 0;
+
     setErrors(
       validation({
         ...data,
@@ -197,7 +199,6 @@ const Create = () => {
           <div className={style.itemContainer}>
             <div className={style.inputGroup}>
               <label className={style.label}>Types:</label>
-
               <select
                 className={style.types_select}
                 defaultValue="0"
