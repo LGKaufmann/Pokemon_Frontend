@@ -8,10 +8,12 @@ const Pagination = () => {
 
   function backPage() {
     dispatch(modifyPage(-1));
+    window.scrollTo(0, 0);
   }
 
   function nextPage() {
     dispatch(modifyPage(1));
+    window.scrollTo(0, 0);
   }
 
   function onTopPage() {
