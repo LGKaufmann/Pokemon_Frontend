@@ -12,7 +12,9 @@
   align-items: center;
   font-size: 14px;
   font-weight: bolder;
+  letter-spacing: 2px;
   color: wheat;
+  background-color: rgba(0, 0, 0, 0.56);
   border: 2px solid wheat;
   width: 90px;
   height: 35px;
@@ -59,6 +61,7 @@
 
 .button_order:hover {
   background: linear-gradient(to bottom, white 5%, wheat 100%);
+  color: black;
   background-color: wheat;
   transform: scale(1.1);
 }

@@ -20,11 +20,11 @@ const Home = () => {
   if (start < 0) start = 0;
 
   useEffect(() => {
-    if (pokemons.length === 0) {
+    if (!pokemons.length) {
       dispatch(getPokemons());
       dispatch(getTypes());
     }
-  }, []);
+  }, [dispatch, pokemons]);
 
   return (
     <div className={style.container}>

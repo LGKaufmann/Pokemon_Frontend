@@ -3,9 +3,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  background: url("../../../public/assets/fondo2.gif") no-repeat center top;
+  background: url("../../../public/assets/fondo2.webp") no-repeat center top;
   background-size: cover;
-  background-attachment: fixed;
   min-height: 100vh;
 
   @include sm {
@@ -49,7 +48,7 @@
 .characters {
   width: 97%;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 10px 0px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;

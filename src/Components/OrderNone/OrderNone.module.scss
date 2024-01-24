@@ -2,12 +2,25 @@
   width: 80px;
   height: 40px;
   box-shadow: 3px 3px 7px -3px #050505;
-  background-color: wheat;
+  color: white;
+  letter-spacing: 1px;
+  background: linear-gradient(to bottom, white 5%, black 100%);
   border-radius: 4px;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
   font-size: 15px;
   font-weight: bold;
   padding: 6px 10px;
+}
+
+.button_order:hover {
+  background: linear-gradient(to bottom, white 5%, wheat 100%);
+  background-color: wheat;
+  color: black;
+  transform: scale(1.1);
+}
+
+.button_order:active {
+  position: relative;
+  top: 1px;
 }

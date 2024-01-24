@@ -28,6 +28,7 @@ const Pokemon = ({ name, image, image2, types, id }) => {
       {image2 && (
         <img
           className={style.character}
+          alt={name}
           src={image2}
           width="250px"
           height="250px"
