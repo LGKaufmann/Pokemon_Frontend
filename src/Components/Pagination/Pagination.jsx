@@ -35,7 +35,7 @@ const Pagination = () => {
         </button>
       </div>
       <h3 className={style.page}>{currentPage}</h3>
-      <div className={style.container_pagination2}>
+      <div>
         <button className={style.button_page} onClick={nextPage}>
           {">"}
         </button>

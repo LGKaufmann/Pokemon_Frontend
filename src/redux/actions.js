@@ -2,7 +2,6 @@ import axios from "axios";
 import {
   BOTTOMPAGE,
   CREATE_POKEMON,
-  ERROR_NAME_POKEMON,
   FILTER_POKEMON,
   FILTER_TYPE,
   FINDPOKEMONS,
