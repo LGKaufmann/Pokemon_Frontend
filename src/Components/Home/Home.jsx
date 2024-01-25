@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import Pokemon from "../Pokemon/Pokemon";
 import Order from "../Order/Order";
+import pokeball from "../../../public/assets/pokeball.png";
+import { TypeAnimation } from "react-type-animation";
 import { getPokemons, getTypes } from "../../redux/actions";
 import style from "./Home.module.scss";
 import { Link } from "react-router-dom";
@@ -31,34 +33,53 @@ const Home = () => {
       <div className={style.title_container}>
         <span className={style.title}>POKEMON APP</span>
       </div>
-      <div>
+      <div className={style.order}>
         <Order />
       </div>
-      <div className={style.characters}>
-        {pokemons
-          .map((pokemon) => {
-            return (
-              <Link
-                className={style.link}
-                to={`/detail/${pokemon.id}`}
-                key={pokemon.id}
-              >
-                <Pokemon
-                  id={pokemon.id}
-                  name={pokemon.name}
-                  image={pokemon.image}
-                  image2={pokemon.image2}
-                  attack={pokemon.attack}
-                  types={pokemon.types}
+      {pokemons.length !== 0 ? (
+        <div className={style.characters}>
+          {pokemons
+            .map((pokemon) => {
+              return (
+                <Link
+                  className={style.link}
+                  to={`/detail/${pokemon.id}`}
                   key={pokemon.id}
-                />
-              </Link>
-            );
-          })
-          .slice(start, end)}
-        <div className={style.pagination}>
-          <Pagination />
+                >
+                  <Pokemon
+                    id={pokemon.id}
+                    name={pokemon.name}
+                    image={pokemon.image}
+                    image2={pokemon.image2}
+                    attack={pokemon.attack}
+                    types={pokemon.types}
+                    key={pokemon.id}
+                  />
+                </Link>
+              );
+            })
+            .slice(start, end)}
         </div>
+      ) : (
+        <div className={style.loading}>
+          <img
+            className={style.pokeball}
+            src={pokeball}
+            alt="pokeball"
+            width="300px"
+            height="300px"
+          />
+          <TypeAnimation
+            className={style.animacion}
+            sequence={["Loading pokemons", 1000, "please wait.", 1000]}
+            wrapper="span"
+            speed={20}
+            repeat={Infinity}
+          />
+        </div>
+      )}
+      <div className={style.pagination}>
+        <Pagination />
       </div>
     </div>
   );

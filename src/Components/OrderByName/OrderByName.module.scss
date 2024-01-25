@@ -3,6 +3,10 @@
   flex-direction: row;
   align-items: center;
   margin-left: 20px;
+
+  @include sm {
+    margin: 0;
+  }
 }
 
 .orderbar_item_title {

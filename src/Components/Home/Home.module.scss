@@ -1,8 +1,9 @@
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   background: url("../../../public/assets/fondo2.webp") no-repeat center top;
   background-size: cover;
   min-height: 100vh;
@@ -37,11 +38,11 @@
 
 .title_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 90%;
+  margin: 20px;
+  width: 92%;
   height: 50px;
 }
 
@@ -53,6 +54,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+
   justify-content: space-around;
 }
 
@@ -60,6 +62,61 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 100vw;
+  width: 90vw;
   margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.56);
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  width: 800px;
+  height: 600px;
+  padding: 0;
+  img {
+    margin-top: 120px;
+    margin-bottom: 30px;
+    animation: rotar 2s linear infinite;
+  }
+
+  @include sm {
+    width: 350px;
+    height: 360px;
+
+    img {
+      width: 200px;
+      height: 200px;
+      margin: 30px;
+    }
+  }
+  @include md {
+    width: 500px;
+    height: 450px;
+    color: wheat;
+
+    img {
+      margin: 30px;
+    }
+  }
+}
+
+.animacion {
+  margin-left: 10px;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
