@@ -38,9 +38,9 @@
   display: flex;
   flex-direction: column;
   padding: 50px;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-content: center;
   align-items: center;
   background: linear-gradient(to top right, lightblue, wheat);
@@ -63,6 +63,7 @@
 
 .conteiner_title {
   text-align: center;
+
   width: 380px;
 }
 
@@ -88,6 +89,7 @@
   font-weight: bold;
   font-family: "VT323", monospace;
   padding: 0px 0px 5px 10px;
+
   color: hsl(0, 0%, 0%);
 
   @include sm {
@@ -97,6 +99,7 @@
 
 .developer {
   border-radius: 5px;
+
   @include sm {
     width: 200px;
     height: 200px;
